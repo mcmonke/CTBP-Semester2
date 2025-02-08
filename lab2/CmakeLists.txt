@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.27)
+set(project lab02)
+
+project(${project})
+
+set(CMAKE_CXX_STANDARD 20)
+
+set(${project}_SOURCES main.cpp)
+
+add_subdirectory(Planet)
+add_subdirectory(Appl)
+
+set(${project}_SOURCE_LIST ${${project}_SOURCES})
+
+add_executable(${project} ${${project}_SOURCE_LIST})
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Build/sourcePlanet.txt
+        ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/Build/sourceAppl.txt
+        ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+
+target_link_libraries(${project} Planet)
+target_link_libraries(${project} Appl)

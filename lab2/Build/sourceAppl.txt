@@ -1,0 +1,5 @@
+5SannikovNikolayAlexandrovich 18 2 35000
+FedorovIvanBorisovich 32 10 75000
+DolbinEgorDmitrievich 20 3 55000
+KirieshkinAlexeyAlexandrovich 26 6 53000
+DoctorovSergeyAlexeevich 40 15 90000
